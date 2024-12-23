@@ -6,74 +6,77 @@
   margin-top: 64px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: rgb(191, 191, 199);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrapper {
+  margin: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* General Menu Styles */
+.menu-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.gf-window {
-  background-color:darkslateblue;
-  color: aliceblue;
-  width: 128px;
-  height: 256px;
-  border: 1px solid black;
-  border-radius: 10px;
-  transition: transform 0.3s ease-out;
-  transform: translateX(100%);
-}
-.gf-window:hover {
-  background-color:rgb(103, 92, 171);
-  border: 3px solid rgb(174, 171, 171);
-}
-
-.gf-window.visible {
-  transform: translateX(0);
-}
-
-.drawer {
   position: relative;
-  overflow: hidden;
+  padding: 10px;
+  max-width: 400px;
+  min-width: 250px;
 }
 
-.button-slide {
-  max-height: 0;
-  overflow: hidden;
-  transition: height 0.3s ease;
-  opacity: 0;
-  transition: opacity 0.3s ease, max-height 0.3s ease;
+.menu-item-container {
+  position: relative;
 }
 
-.button-slide.visible {
-  max-height: 50px; /* Adjust according to the height of your button */
-  opacity: 1;
+.menu-item {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  margin-bottom: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.menu-item.active {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+
+.menu-item:hover {
+  background-color: #d0d0d0;
+}
+
+
+.sub-menu-row {
+  display: flex;
+  padding: 0px 0px;
+  flex-direction: row;
+  gap: 16px; 
+  position: absolute;
+  left: 100%; 
+  top: 0;
+  z-index: 100;
+  background-color: none;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.drop-menu {
+  margin-top: 4px;
+  background-color: #ff1d1d;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px;
+  position: absolute;
+  top: 100%; /* Align below the submenu item */
+  left: 0;
+  z-index: 99;
+}
+
+/* Prevent Clipping */
+.menu-children {
+  overflow: visible;
 }
