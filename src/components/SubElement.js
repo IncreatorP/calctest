@@ -33,7 +33,6 @@ function SubElement({ sub }) {
     }
   };
 
-  // Render conditionally based on `sub.isVisible`
   if (!sub.isVisible) {
     return null;
   }

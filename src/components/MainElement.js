@@ -23,9 +23,9 @@ function MainElement({ title }) {
   const handleClick = () => {
     const areAllHidden = subElements.every((sub) => !sub.isVisible);
     if (areAllHidden) {
-      toggleSubElements(); // Show sub-elements
+      toggleSubElements();
     } else {
-      hideAllSubSubElements(); // Hide all, including sub-sub-elements
+      hideAllSubSubElements();
     }
   };
 

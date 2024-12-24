@@ -80,3 +80,30 @@ body {
 .menu-children {
   overflow: visible;
 }
+
+.rida-element {
+  box-sizing: border-box;
+  display: inline-block;
+  width: auto;
+  border-radius: 16px;
+  padding: 10px 16px;
+  border: 1px solid aliceblue;;
+  background-color: #d1cfcf;
+  transition: background-color 0.3s ease;
+}
+
+.nimi {
+  background-color: #968e8e;
+}
+
+.moot {
+  background-color: #84aefc;
+}
+
+.kaal {
+  background-color: #dd9f9f;
+}
+
+.active {
+  border: 2px solid rgb(3, 130, 241);;
+}
